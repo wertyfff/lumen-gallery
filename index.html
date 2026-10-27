@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen — The Best Free Images</title>
+<meta name="description" content="Lumen is a free gallery of high-quality images. Original photos in full resolution, with no watermarks and no subscriptions.">
+<meta name="theme-color" content="#fffcf8">
+<meta property="og:title" content="Lumen — The Best Free Images">
+<meta property="og:description" content="A free gallery of high-quality images. Original photos in full resolution, with no watermarks and no subscriptions.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23fffcf8'/%3E%3Cpath d='M4 5h19v2.2l-5 .6V37h19.5l3.8-8.6H44L42.6 41H4v-2.2l5-.6V7.8l-5-.6z' fill='%2312110e'/%3E%3Cpath d='M22 33 44 8M22 33 33 3M22 33 47 21' stroke='%23d69b3e' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wdth,wght@0,62.5..100,300..600;1,62.5..100,300..600&family=Inter+Tight:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+  // always start from the top on reload
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  window.scrollTo(0, 0);
+</script>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ===== Loader ===== -->
+<div class="loader" role="status" aria-label="Loading">
+  <div class="loader__frame">
+    <div class="loader__shots"></div>
+  </div>
+  <div class="loader__brand">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+      <path class="mark__l" d="M4 5h19v2.2l-5 .6V37h19.5l3.8-8.6H44L42.6 41H4v-2.2l5-.6V7.8l-5-.6z"/>
+      <g class="mark__rays"><path pathLength="1" d="M22 33 44 8"/><path pathLength="1" d="M22 33 33 3"/><path pathLength="1" d="M22 33 47 21"/></g>
+    </svg>
+    <div class="loader__words" aria-hidden="true">
+      <span>Quality</span><span>Freedom</span><span>Originality</span><span>Focus on the best</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="header">
+  <a href="#top" class="logo" aria-label="Lumen — back to top">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+      <path class="mark__l" d="M4 5h19v2.2l-5 .6V37h19.5l3.8-8.6H44L42.6 41H4v-2.2l5-.6V7.8l-5-.6z"/>
+      <g class="mark__rays"><path pathLength="1" d="M22 33 44 8"/><path pathLength="1" d="M22 33 33 3"/><path pathLength="1" d="M22 33 47 21"/></g>
+    </svg>
+  </a>
+</header>
+
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+  <span class="menu-btn__label">Menu</span>
+  <span class="menu-btn__icon"><i></i><i></i></span>
+</button>
+
+<div class="menu-mask" aria-hidden="true"></div>
+<nav class="menu" id="menu" aria-label="Site navigation" aria-hidden="true">
+  <div class="menu__head"><span>Menu</span><button class="menu__close" type="button" aria-label="Close menu">&times;</button></div>
+  <ul class="menu__list">
+    <li><a href="#top" data-go="1"><span class="menu__num">01</span><span><b>Where images find you</b><small>About Lumen</small></span></a></li>
+    <li><a href="#" data-go="2"><span class="menu__num">02</span><span><b>What makes an image great</b><small>Our approach</small></span></a></li>
+    <li><a href="#" data-go="3"><span class="menu__num">03</span><span><b>Beauty is in the details</b><small>Curation</small></span></a></li>
+    <li><a href="#" data-go="4"><span class="menu__num">04</span><span><b>Why we're better</b><small>The difference</small></span></a></li>
+    <li><a href="#" data-go="5"><span class="menu__num">05</span><span><b>Quality</b><small>Full resolution</small></span></a></li>
+    <li><a href="#" data-go="6"><span class="menu__num">06</span><span><b>Freedom</b><small>Free for everyone</small></span></a></li>
+    <li><a href="#" data-go="7"><span class="menu__num">07</span><span><b>Originality</b><small>Real photographers</small></span></a></li>
+    <li><a href="#gallery" data-go="8"><span class="menu__num">08</span><span><b>Gallery</b><small>Browse and download</small></span></a></li>
+    <li><a href="https://www.instagram.com/sqaurex/" target="_blank" rel="noopener" class="menu__ig"><span class="menu__num"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></span><span><b>Instagram</b><small>Follow Lumen for new shots</small></span></a></li>
+  </ul>
+</nav>
+
+<!-- Chapter rail -->
+<aside class="rail" aria-label="Chapters">
+  <button class="rail__icon" type="button" aria-label="Chapter list"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 4h9M5 8h9M5 12h9" stroke="currentColor" stroke-width="1.4"/><circle cx="2" cy="4" r="1" fill="currentColor"/><circle cx="2" cy="8" r="1" fill="currentColor"/><circle cx="2" cy="12" r="1" fill="currentColor"/></svg></button>
+  <ol class="rail__dots"></ol>
+  <div class="rail__list"></div>
+</aside>
+
+<!-- Bottom pill -->
+<a class="report-pill" href="#gallery" data-go="8">
+  <span class="report-pill__count"><span class="report-pill__cur">01</span><span class="report-pill__sep">/</span>08</span>
+  <span class="report-pill__label">Open gallery</span>
+  <span class="report-pill__arrow"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
+</a>
+
+<main id="top">
+
+  <!-- ===== 01 HERO ===== -->
+  <section class="hero" data-chapter="1" data-bg="#fffcf8">
+    <div class="hero__pin">
+      <div class="hero__back"></div>
+      <h1 class="hero__title" aria-label="Where images find you">
+        <span class="line"><span>Where</span></span>
+        <span class="line"><span><em>Images</em></span></span>
+        <span class="line"><span>Find</span></span>
+        <span class="line"><span>You</span></span>
+      </h1>
+      <div class="hero__front"></div>
+    </div>
+    <div class="hero__spacer"></div>
+    <div class="intro grid">
+      <div class="intro__line"><i></i></div>
+      <div class="intro__body">
+        <p class="label">( 01 )</p>
+        <h2 class="h2 reveal-lines">Lumen is a free gallery of the highest-quality images.</h2>
+        <p class="body-text fade-up">No subscriptions, no watermarks, no confusing terms. Just original photos in full resolution that you can open and download in a single click.</p>
+      </div>
+    </div>
+    <div class="scatter scatter--hero" data-seed="11" data-count="16"></div>
+    <div class="ask grid">
+      <p class="body-text fade-up">There are endless images on the internet. So we asked ourselves:</p>
+    </div>
+  </section>
+
+  <!-- ===== 02 RING ===== -->
+  <section class="ring-sec" data-chapter="2" data-bg="#fffcf8">
+    <div class="ring-sec__pin">
+      <div class="ring" data-seed="23"></div>
+      <div class="ring-sec__text">
+        <p class="label">( 02 )</p>
+        <h2 class="h2">What makes an image<br><em>truly</em> great?</h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallup grid" data-chapter="2" data-bg="#f8f1e7">
+    <p class="gallup__text words">We collect work from <span class="gallup__chip"><b>PHOTOGRAPHERS</b><button type="button" class="gallup__plus" aria-label="About the photographers" aria-expanded="false">+</button><span class="gallup__pop" role="tooltip">Every photo in the gallery credits its author, with a link to the original photo page.</span></span> who shoot for the love of it, and we keep only the shots worthy of a cover. <em class="muted">Here's what came of it.</em></p>
+  </section>
+  <div class="scatter scatter--tall" data-seed="31" data-count="14" data-bg="#f8f1e7"></div>
+
+  <!-- ===== CINEMATIC SCROLL ===== -->
+  <section class="cine" data-chapter="2">
+    <div class="cine__sticky">
+      <div class="cine__panel cine__panel--1">
+        <picture><source media="(max-width: 900px)" srcset="https://picsum.photos/id/28/860/1400"><img src="https://picsum.photos/id/28/1920/1200" alt="Green valley with a stream" class="cine__img"></picture>
+        <a class="share" href="https://www.instagram.com/sqaurex/" target="_blank" rel="noopener">Download <svg viewBox="0 0 16 16"><path d="M8 2v9M4 7.5 8 11.5l4-4M3 14h10"/></svg></a>
+        <div class="cine__stat">
+          <p class="stat">Full <em>resolution</em></p>
+          <p class="stat-sub">Every photo opens at its original size — no compression, no cropping, no lost detail.</p>
+        </div>
+      </div>
+
+      <div class="cine__panel cine__panel--2">
+        <picture><source media="(max-width: 900px)" srcset="https://picsum.photos/id/294/860/1400"><img src="https://picsum.photos/id/294/1920/1200" alt="Mountains in evening light" class="cine__img"></picture>
+        <a class="share" href="https://www.instagram.com/sqaurex/" target="_blank" rel="noopener">Download <svg viewBox="0 0 16 16"><path d="M8 2v9M4 7.5 8 11.5l4-4M3 14h10"/></svg></a>
+        <div class="chart">
+          <div class="chart__head"><span>Typical<br>stock sites</span><span>LUMEN</span></div>
+          <div class="chart__row">
+            <div class="chart__bar chart__bar--dash" style="--w:30"><span class="pill">Subscription</span></div>
+            <div class="chart__bar" style="--w:70"><small>Price</small><span class="pill">Free</span></div>
+          </div>
+          <div class="chart__row">
+            <div class="chart__bar chart__bar--dash" style="--w:38"><span class="pill">Watermark</span></div>
+            <div class="chart__bar" style="--w:78"><small>Image</small><span class="pill">Clean</span></div>
+          </div>
+        </div>
+        <div class="cine__stat cine__stat--serif">
+          <p class="split-words">We removed everything in the way: <em>no subscriptions</em>, no watermarks, no sign-up just to get one image.</p>
+        </div>
+      </div>
+
+      <div class="cine__panel cine__panel--3">
+        <picture><source media="(max-width: 900px)" srcset="https://picsum.photos/id/400/860/1400"><img src="https://picsum.photos/id/400/1920/1200" alt="Close-up of green leaves" class="cine__img"></picture>
+        <a class="share" href="https://www.instagram.com/sqaurex/" target="_blank" rel="noopener">Download <svg viewBox="0 0 16 16"><path d="M8 2v9M4 7.5 8 11.5l4-4M3 14h10"/></svg></a>
+        <svg class="viz viz-net" viewBox="0 0 600 600" aria-hidden="true"></svg>
+        <span class="pill pill--abs" style="left:50%;top:50%">Collections</span>
+        <div class="cine__stat">
+          <p class="stat">Sorted <em>by theme</em></p>
+          <p class="stat-sub">Nature, mountains, sea, city, people, minimal — find the right shot in seconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="deeper" data-chapter="2" data-bg="#fffcf8">
+    <p class="body-text">See for yourself…</p>
+  </section>
+
+  <!-- ===== 03 ===== -->
+  <section class="chapter-head chapter-head--center grid" data-chapter="3" data-bg="#fffcf8">
+    <div>
+      <p class="label">( 03 )</p>
+      <h2 class="h2 reveal-lines">Beauty is in the details</h2>
+      <p class="body-text fade-up">We look at light, composition and sharpness before a photo ever reaches you. Only the shots worth keeping make it in.</p>
+    </div>
+  </section>
+
+  <section class="sbs" data-chapter="3">
+    <div class="sbs__sticky">
+      <div class="sbs__stat sbs__stat--left">
+        <p class="stat stat--dark">Hand-<em>picked</em></p>
+        <p class="stat-sub stat-sub--dark">Every photo is reviewed by a real curator, not an algorithm.</p>
+      </div>
+      <div class="sbs__card">
+        <div class="sbs__img sbs__img--1"><img src="https://picsum.photos/id/319/800/1200" alt="Hands holding a film camera"></div>
+        <div class="sbs__img sbs__img--2"><img src="https://picsum.photos/id/64/800/1200" alt="Woman in a field at sunset"></div>
+        <a class="share" href="https://www.instagram.com/sqaurex/" target="_blank" rel="noopener">Download <svg viewBox="0 0 16 16"><path d="M8 2v9M4 7.5 8 11.5l4-4M3 14h10"/></svg></a>
+        <svg class="viz sbs__half" viewBox="0 0 300 300" aria-hidden="true">
+          <path class="draw" d="M40 190 A110 110 0 0 1 260 190" pathLength="1"/>
+          <circle class="node" cx="40" cy="190" r="7"/><circle class="node" cx="260" cy="190" r="7"/>
+        </svg>
+        <span class="pill pill--abs sbs__pill1" style="left:50%;top:51%">Picked</span>
+        <svg class="viz sbs__full" viewBox="0 0 300 300" aria-hidden="true">
+          <circle class="dash-ring" cx="150" cy="150" r="118"/>
+          <circle class="draw" cx="150" cy="150" r="100" pathLength="1"/>
+          <circle class="node" cx="150" cy="50" r="7"/>
+        </svg>
+        <span class="pill pill--abs sbs__pill2" style="left:50%;top:54%">Free to use</span>
+      </div>
+      <div class="sbs__stat sbs__stat--right">
+        <p class="stat stat--dark">Honest <em>license</em></p>
+        <p class="stat-sub stat-sub--dark">Download and use photos in your projects. Photographers always appreciate a credit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 04 ===== -->
+  <section class="limits grid" data-chapter="4" data-bg="#fffcf8">
+    <div class="scatter scatter--side" data-seed="47" data-count="10"></div>
+    <div class="limits__col">
+      <p class="label">( 04 )</p>
+      <h2 class="h2 reveal-lines">Why are we better than the usual services?</h2>
+      <ul class="limits__list">
+        <li><small>No noise</small><b>No <em>ads</em></b><p>Just images — the gallery never distracts you from what you came for.</p></li>
+        <li><small>No traps</small><b>No <em>subscriptions</em></b><p>No paid “premium” shots, free trials or hidden conditions.</p></li>
+        <li><small>No loss</small><p>Original size and true colors — exactly as the photographer intended.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="manifest grid" data-chapter="4" data-bg="#fffcf8">
+    <p class="manifest__text words">Many image services have turned into feeds of ads and endless subscriptions. We do the opposite: we gather the best shots, give them away for free in full quality and always credit the authors. <em class="muted">Here's how it works.</em></p>
+  </section>
+
+  <!-- ===== 05 QUALITY ===== -->
+  <section class="program" data-chapter="5" data-bg="#f8f1e7">
+    <div class="program__intro grid">
+      <div>
+        <p class="label">( 05 ) <span class="label__tag">Quality</span></p>
+        <h2 class="h2 h2--lg reveal-lines">Every shot, exactly as the photographer intended</h2>
+        <p class="body-text fade-up">We don't over-compress files or crop the edges. You get the whole photo — for print, web or a cover.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <article class="dcard" style="--x:36%;--y:0;--sp:1">
+        <img src="https://picsum.photos/id/1015/900/900" alt="">
+        <svg class="viz viz-card" data-viz="arc" viewBox="0 0 300 300" aria-hidden="true"></svg>
+        <span class="pill pill--abs" style="left:50%;top:35%">Source</span>
+        <div class="dcard__txt"><p class="stat">Original <em>size</em></p><p>Download the original — no compression, no lost detail.</p></div>
+      </article>
+      <article class="dcard" style="--x:62%;--y:44vh;--sp:1.5">
+        <img src="https://picsum.photos/id/1039/900/900" alt="">
+        <svg class="viz viz-card" data-viz="ring" viewBox="0 0 300 300" aria-hidden="true"></svg>
+        <span class="pill pill--abs" style="left:47%;top:37%">Color</span>
+        <div class="dcard__txt"><p class="stat">True <em>colors</em></p><p>No filters on top of the photographer's own edit.</p></div>
+      </article>
+      <article class="dcard" style="--x:8%;--y:88vh;--sp:.7">
+        <img src="https://picsum.photos/id/1043/900/900" alt="">
+        <svg class="viz viz-card" data-viz="half" viewBox="0 0 300 300" aria-hidden="true"></svg>
+        <span class="pill pill--abs" style="left:50%;top:36%">Sharpness</span>
+        <div class="dcard__txt"><p class="stat">Hand <em>checked</em></p><p>Blurry, noisy and overexposed shots never make it into the gallery.</p></div>
+      </article>
+    </div>
+    <div class="program__body grid">
+      <div class="fade-up">
+        <p>A great image should hold up up close. That's why we keep the originals and deliver them just as the photographer shared them.</p>
+        <p>Need a small preview? The gallery loads it for you. Printing a poster? Open the original.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="summary" data-chapter="5" data-seed="51">
+    <div class="summary__sticky">
+      <div class="summary__panel">
+        <div class="summary__grid grid">
+          <div class="summary__text">
+            <div class="summary__block">
+              <p class="summary__lead">Quality isn't a filter in the settings — it's how we choose. Every shot on Lumen:</p>
+              <ul class="summary__list">
+                <li><b>Is stored as the original</b><span>and downloads at full resolution.</span></li>
+                <li><b>Passes a review</b><span>for sharpness, light and composition.</span></li>
+                <li><b>Loads fast</b><span>— previews appear as you scroll, with no waiting.</span></li>
+              </ul>
+              <a class="btn-pill" href="#gallery" data-go="8">View gallery <i><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></i></a>
+            </div>
+          </div>
+          <div class="summary__col"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 06 FREEDOM ===== -->
+  <section class="program" data-chapter="6" data-bg="#f8f1e7">
+    <div class="program__intro grid">
+      <div>
+        <p class="label">( 06 ) <span class="label__tag">Freedom</span></p>
+        <h2 class="h2 h2--lg reveal-lines">Free — with no asterisks in the fine print</h2>
+        <p class="body-text fade-up">No sign-up, no free trial, no hunting for the button to cancel a subscription.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <article class="dcard" style="--x:36%;--y:0;--sp:1">
+        <img src="https://picsum.photos/id/1018/900/900" alt="">
+        <svg class="viz viz-card" data-viz="grid" viewBox="0 0 300 300" aria-hidden="true"></svg>
+        <span class="pill pill--abs" style="left:50%;top:36%">No login</span>
+        <div class="dcard__txt"><p class="stat">No <em>sign-up</em></p><p>Open the site and start browsing and downloading right away.</p></div>
+      </article>
+      <article class="dcard" style="--x:12%;--y:46vh;--sp:1.4">
+        <img src="https://picsum.photos/id/1016/900/900" alt="">
+        <svg class="viz viz-card" data-viz="venn" viewBox="0 0 300 300" aria-hidden="true"></svg>
+        <span class="pill pill--abs" style="left:50%;top:32%">Clean</span>
+        <div class="dcard__txt"><p class="stat">No <em>watermarks</em></p><p>The image is all yours — no logos over the frame.</p></div>
+      </article>
+      <article class="dcard" style="--x:62%;--y:92vh;--sp:.75">
+        <img src="https://picsum.photos/id/1036/900/900" alt="">
+        <svg class="viz viz-card" data-viz="slider" viewBox="0 0 300 300" aria-hidden="true"></svg>
+        <div class="dcard__txt"><p class="stat">For <em>any</em> project</p><p>Website, presentation, cover, post — use it wherever you need.</p></div>
+      </article>
+    </div>
+    <div class="program__body grid">
+      <div class="fade-up">
+        <p>We believe great images should be available to everyone — students, designers, a small coffee shop and a big newsroom alike.</p>
+        <p>That's why Lumen has no paid tiers: every shot is equally open to all.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="summary" data-chapter="6" data-seed="61">
+    <div class="summary__sticky">
+      <div class="summary__panel">
+        <div class="summary__grid grid">
+          <div class="summary__text">
+            <div class="summary__block">
+              <p class="summary__lead">Freedom means nothing stands between you and the image you need. That's why we:</p>
+              <ul class="summary__list">
+                <li><b>Don't ask you to sign up</b><span>just to download one image.</span></li>
+                <li><b>Don't hide photos</b><span>behind paid tiers and free trials.</span></li>
+                <li><b>Don't add watermarks</b><span>or put our logo on other people's photos.</span></li>
+              </ul>
+              <a class="btn-pill" href="#gallery" data-go="8">View gallery <i><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></i></a>
+            </div>
+          </div>
+          <div class="summary__col"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 07 ORIGINALITY ===== -->
+  <section class="program" data-chapter="7" data-bg="#f8f1e7">
+    <div class="program__intro grid">
+      <div>
+        <p class="label">( 07 ) <span class="label__tag">Originality</span></p>
+        <h2 class="h2 h2--lg reveal-lines">Real moments instead of the same old stock smiles</h2>
+        <p class="body-text fade-up">We look for photos with character — the kind you remember at first glance.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <article class="dcard" style="--x:14%;--y:0;--sp:1">
+        <img src="https://picsum.photos/id/1067/900/900" alt="">
+        <svg class="viz viz-card" data-viz="bars" viewBox="0 0 300 300" aria-hidden="true"></svg>
+        <div class="dcard__txt"><p class="stat">Authentic <em>shots</em></p><p>Work by photographers, not endless copies of one template.</p></div>
+      </article>
+      <article class="dcard" style="--x:60%;--y:40vh;--sp:1.4">
+        <img src="https://picsum.photos/id/342/900/900" alt="">
+        <svg class="viz viz-card" data-viz="venn" viewBox="0 0 300 300" aria-hidden="true"></svg>
+        <div class="dcard__txt dcard__txt--serif"><p>A great image tells a story. We choose the ones with <em>something to discover</em>.</p></div>
+      </article>
+      <article class="dcard" style="--x:30%;--y:90vh;--sp:.75">
+        <img src="https://picsum.photos/id/146/900/900" alt="">
+        <svg class="viz viz-card" data-viz="dots" viewBox="0 0 300 300" aria-hidden="true"></svg>
+        <div class="dcard__txt"><p class="stat">Author <em>credit</em></p><p>Every photo shows who took it and where to see the original.</p></div>
+      </article>
+    </div>
+    <div class="program__body grid">
+      <div class="fade-up">
+        <p>Originality means respect for the people behind the camera. We never hide authors and always show whose work it is.</p>
+        <p>For you, it means one thing: images that aren't in every other presentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="summary summary--double" data-chapter="7" data-seed="71">
+    <div class="summary__sticky">
+      <div class="summary__panel">
+        <div class="summary__grid grid">
+          <div class="summary__text">
+            <div class="summary__block">
+              <p class="summary__lead">For people looking for images, we want to be the place where searching becomes a pleasure. So Lumen:</p>
+              <ul class="summary__list">
+                <li><b>Builds collections</b><span>by theme and mood — from quiet landscapes to busy cities.</span></li>
+                <li><b>Remembers favorites</b><span>— heart the shots you'll want to come back to.</span></li>
+              </ul>
+            </div>
+            <div class="summary__block">
+              <p class="summary__lead">For people who take photos, we want to be a showcase where work is seen and valued. So Lumen:</p>
+              <ul class="summary__list">
+                <li><b>Credits the author</b><span>on every photo — in the card and in the viewer.</span></li>
+                <li><b>Links to the original</b><span>— the photo's own page, where you can learn more about the photographer.</span></li>
+              </ul>
+              <a class="btn-pill" href="#gallery" data-go="8">View gallery <i><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></i></a>
+            </div>
+          </div>
+          <div class="summary__col"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 08 ===== -->
+  <section class="moment grid" data-chapter="8" data-bg="#fffcf8">
+    <div class="scatter scatter--moment" data-seed="83" data-count="12"></div>
+    <div class="moment__text">
+      <p class="label">( 08 )</p>
+      <h2 class="h2 reveal-lines">Start exploring</h2>
+      <div class="fade-up body-text">
+        <p>A great image saves hours: it sets the mood, explains the idea and brings a project to life.</p>
+        <p>We built a gallery where those images are easy to find. Browse, save your favorites and download originals — for free.</p>
+      </div>
+      <div class="btn-row fade-up">
+        <a class="btn-pill btn-pill--dark" href="#gallery" data-go="8">To the gallery <i><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></i></a>
+        <a class="btn-pill btn-pill--line" href="https://www.instagram.com/sqaurex/" target="_blank" rel="noopener">Follow on Instagram <i><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote grid" data-chapter="8" data-bg="#fffcf8">
+    <div class="scatter scatter--quote" data-seed="91" data-count="8"></div>
+    <blockquote class="quote__text">
+      <span class="quote__mark">“</span>
+      <span class="line"><span>You don't</span></span>
+      <span class="line"><span><em>take</em> a</span></span>
+      <span class="line"><span>photograph,</span></span>
+      <span class="line"><span>you <em>make</em> it.</span></span>
+      <cite>( Ansel Adams, photographer )</cite>
+    </blockquote>
+    <figure class="quote__photo"><img src="https://picsum.photos/id/91/900/680?grayscale" alt="Person holding a film camera, black and white"></figure>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="gallery" id="gallery" data-chapter="8" data-bg="#fffcf8">
+    <div class="gallery__head">
+      <div>
+        <p class="label">( Gallery )</p>
+        <h2 class="h2 h2--lg reveal-lines">The best shots. Free.</h2>
+      </div>
+      <label class="search">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6"/><path d="m13 13 5 5"/></svg>
+        <input type="search" placeholder="Search: forest, sea, city, author…" aria-label="Search the gallery">
+      </label>
+    </div>
+    <div class="chips" role="tablist" aria-label="Themes"></div>
+    <div class="masonry" aria-live="polite"></div>
+    <p class="gallery__empty" hidden>Nothing found. Try another word or theme.</p>
+    <div class="gallery__more"><button type="button" class="btn-pill btn-pill--dark more-btn">Show more <i><svg viewBox="0 0 16 16"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></i></button></div>
+    <div class="ig-cta fade-up">
+      <p class="ig-cta__text">New collections land on Instagram first.</p>
+      <a class="btn-pill btn-pill--dark" href="https://www.instagram.com/sqaurex/" target="_blank" rel="noopener">Follow on Instagram <i><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></i></a>
+    </div>
+  </section>
+</main>
+
+<!-- Image viewer -->
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <button class="lightbox__close" type="button" aria-label="Close">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image">‹</button>
+  <figure class="lightbox__figure">
+    <img alt="">
+    <figcaption class="lightbox__bar">
+      <span class="lightbox__author"></span>
+      <span class="lightbox__actions">
+        <button type="button" class="fav-btn lightbox__fav" aria-label="Add to favorites">♥</button>
+        <a class="btn-pill lightbox__dl" href="https://www.instagram.com/sqaurex/" target="_blank" rel="noopener">Download <i><svg viewBox="0 0 16 16"><path d="M8 2v9M4 7.5 8 11.5l4-4M3 14h10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></i></a>
+      </span>
+    </figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next image">›</button>
+</div>
+
+<footer class="footer">
+  <div class="footer__top">
+    <div>
+      <h2 class="footer__title">More shots are on the way</h2>
+      <p>We keep adding to the gallery and building new collections. Follow us on Instagram so you never miss a new set.</p>
+    </div>
+    <a class="footer__card" href="#gallery" data-go="8">
+      <img src="https://picsum.photos/id/162/240/240" alt="">
+      <span><small>Gallery</small>Browse all collections</span>
+    </a>
+  </div>
+  <div class="footer__cols">
+    <ul class="footer__links">
+      <li class="footer__head">Explore</li>
+      <li><a href="#" data-go="5">Quality</a></li>
+      <li><a href="#" data-go="6">Freedom</a></li>
+      <li><a href="#" data-go="7">Originality</a></li>
+      <li><a href="#gallery" data-go="8">Gallery</a></li>
+    </ul>
+    <ul class="footer__links">
+      <li class="footer__head">Follow</li>
+      <li><a class="footer__ig" href="https://www.instagram.com/sqaurex/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg> Instagram</a></li>
+    </ul>
+  </div>
+  <div class="logo logo--footer">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+      <path class="mark__l" d="M4 5h19v2.2l-5 .6V37h19.5l3.8-8.6H44L42.6 41H4v-2.2l5-.6V7.8l-5-.6z"/>
+      <g class="mark__rays"><path pathLength="1" d="M22 33 44 8"/><path pathLength="1" d="M22 33 33 3"/><path pathLength="1" d="M22 33 47 21"/></g>
+    </svg>
+  </div>
+  <p class="footer__copy">© 2026 Lumen. Photos provided by Lorem Picsum (images by Unsplash photographers). Credit belongs to each photographer.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
