@@ -58,7 +58,7 @@
 <div class="menu-mask" aria-hidden="true"></div>
 <nav class="menu" id="menu" aria-label="Site navigation" aria-hidden="true">
   <div class="menu__head"><span>Menu</span><button class="menu__close" type="button" aria-label="Close menu">&times;</button></div>
-  <ul class="menu__list">
+  <ul class="menu__list" data-lenis-prevent>
     <li><a href="#top" data-go="1"><span class="menu__num">01</span><span><b>Where images find you</b><small>About Lumen</small></span></a></li>
     <li><a href="#" data-go="2"><span class="menu__num">02</span><span><b>What makes an image great</b><small>Our approach</small></span></a></li>
     <li><a href="#" data-go="3"><span class="menu__num">03</span><span><b>Beauty is in the details</b><small>Curation</small></span></a></li>
@@ -464,7 +464,7 @@
 </main>
 
 <!-- Image viewer -->
-<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+<div class="lightbox" data-lenis-prevent role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
   <button class="lightbox__close" type="button" aria-label="Close">&times;</button>
   <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image">‹</button>
   <figure class="lightbox__figure">

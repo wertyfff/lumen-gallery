@@ -616,7 +616,9 @@ a.share:hover { opacity: .75; text-decoration: underline; text-underline-offset:
 
 /* ---------- Мобильная версия ---------- */
 @media (max-width: 900px) {
-  .grain { mix-blend-mode: normal; opacity: .28; }
+  .grain { display: none; }
+  /* Меньше слоёв в памяти GPU — мобильные браузеры падают от их избытка */
+  .hero__img, .scatter__item, .ring__item, .cine__img { will-change: auto; }
   .report-pill, .menu-mask { backdrop-filter: none; -webkit-backdrop-filter: none; }
   .report-pill { background: rgba(240,238,233,.96); }
   .header { padding-top: 16px; }
@@ -656,7 +658,8 @@ a.share:hover { opacity: .75; text-decoration: underline; text-underline-offset:
   .program__intro { padding: 10vh 0 6vh; padding-inline: var(--margin); }
   .program__body { padding: 8vh 0 12vh; padding-inline: var(--margin); }
 
-  .summary__panel { overflow: hidden; }
+  .summary__panel { overflow: hidden; clip-path: none; will-change: transform; }
+  .summary__col-inner { will-change: auto; }
   .summary__col { display: block; position: absolute; top: 0; right: 0; bottom: 0; width: 34%; opacity: .4; pointer-events: none; }
   .summary__col-inner img { max-width: 80px; height: auto !important; aspect-ratio: 4 / 5; }
   .summary__text { position: relative; z-index: 2; }

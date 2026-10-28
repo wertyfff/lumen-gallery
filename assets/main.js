@@ -2,6 +2,7 @@
   'use strict';
 
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const MOBILE = matchMedia('(max-width: 900px)').matches;
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   // Заглушки Lorem Picsum, отобранные по теме: природа, люди, города
@@ -536,14 +537,20 @@
       defaults: { ease: 'power2.out' },
       scrollTrigger: { trigger: sec, start: 'top top', end: 'bottom bottom', scrub: 0.7, invalidateOnRefresh: true }
     });
-    tl.fromTo(panel, { clipPath: 'inset(18% 8% 18% 8%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1, ease: 'power2.inOut' }, 0)
-      .fromTo(inner, { y: () => innerHeight }, { y: () => -inner.offsetHeight, duration: total, ease: 'none' }, 0)
-      .fromTo(blocks[0].children, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.12 }, 0.35);
+    // На телефонах clip-path перерисовывает всю панель каждый кадр — там растим её через scale (GPU).
+    if (MOBILE) {
+      tl.fromTo(panel, { scale: 0.84, borderRadius: 18 }, { scale: 1, borderRadius: 0, duration: 1, ease: 'power2.inOut' }, 0);
+    } else {
+      tl.fromTo(panel, { clipPath: 'inset(18% 8% 18% 8%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1, ease: 'power2.inOut' }, 0);
+    }
+    tl.fromTo(inner, { y: () => innerHeight }, { y: () => -inner.offsetHeight, duration: total, ease: 'none' }, 0)
+      .fromTo(blocks[0].children, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.12 }, MOBILE ? 0.55 : 0.35);
     if (double) {
       tl.to(blocks[0], { autoAlpha: 0, y: -30, duration: 0.5 }, 2.8)
         .fromTo(blocks[1], { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.6 }, 3.2);
     }
-    tl.to(panel, { clipPath: 'inset(0% 4% 0% 4%)', duration: 0.8, ease: 'power2.in' }, total - 0.8);
+    const shrink = MOBILE ? { scale: 0.94, borderRadius: 18 } : { clipPath: 'inset(0% 4% 0% 4%)' };
+    tl.to(panel, { ...shrink, duration: 0.8, ease: 'power2.in' }, total - 0.8);
   });
 
   /* ---------- Цитата ---------- */
